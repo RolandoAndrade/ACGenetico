@@ -174,7 +174,7 @@ class Circle extends Shape
     }
 }
 
-class Rect extends Shape
+class Rectangle extends Shape
 {
     constructor(x, y, w, h, fillColor, strokeColor = null, strokeWidth = 1, lineDash = [])
     {
@@ -194,6 +194,6 @@ class Rect extends Shape
         ctx.fillStyle = this.color;
         ctx.lineWidth = this.strokeWidth;
         ctx.fillRect(this.x, this.y, this.w, this.h);
-        ctx.strokeRect(this.x, this.y, this.w, this.h);
+        //ctx.strokeRect(this.x, this.y, this.w, this.h);
     }
 }
