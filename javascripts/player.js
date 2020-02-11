@@ -18,18 +18,26 @@ class Basic
         this.timeToLive = BASE_TIME_TO_LIVE;
     }
 
-    draw(ctx)
+    draw(ctx, color = "#8e8e8e")
     {
-        new Circle(this.x, this.y,BASIC_SIZE,"#8e8e8e").draw(ctx);
+        new Circle(this.x, this.y,BASIC_SIZE, color).draw(ctx);
     }
 }
 
 class FishBlink extends Basic
 {
-    draw(ctx)
+    draw(ctx, color = "#8e8e8e")
     {
-        super.draw(ctx);
-        new Circle(this.x+BASIC_SIZE, this.y,BASIC_SIZE/2,"#8e8e8e").draw(ctx);
-        new Circle(this.x-BASIC_SIZE, this.y,BASIC_SIZE/2,"#8e8e8e").draw(ctx);
+        super.draw(ctx, color);
+        new Circle(this.x+BASIC_SIZE, this.y,BASIC_SIZE/2,color).draw(ctx);
+        new Circle(this.x-BASIC_SIZE, this.y,BASIC_SIZE/2,color).draw(ctx);
+    }
+}
+
+class Fish extends FishBlink
+{
+    draw(ctx, color = "#c6755e")
+    {
+        super.draw(ctx, color);
     }
 }

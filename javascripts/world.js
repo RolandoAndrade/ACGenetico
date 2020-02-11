@@ -9,7 +9,7 @@ class WorldGenerator
         {
             let x = Math.floor(Math.random()*(maxX-minX))+minX;
             let y = Math.floor(Math.random()*(maxY-minY))+minY;
-            p.push(new FishBlink(x,y));
+            p.push(new Fish(x,y));
         }
         return p;
     }
